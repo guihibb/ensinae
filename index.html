@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- BASE -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="A new approach to driverless mobility">
+    <!-- SITE TITLE -->
+    <title>Ensina | CS50’s Introduction to Computer Science</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="./src/images/fav.svg">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <link rel="alternate" hreflang="x-default" href="https://vay.io" />
+
+    <!-- This site is optimized with the Yoast SEO plugin v20.13 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description"
+        content="This is CS50, Harvard University’s introduction to the intellectual enterprises of computer science and the art of programming, for concentrators and non-concentrators alike, with or without prior programming experience. " />
+    <link rel="canonical" href="https://vay.io/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="This is CS50
+    CS50’s Introduction to Computer Science" />
+    <meta property="og:description"
+        content="This is CS50, Harvard University’s introduction to the intellectual enterprises of computer science and the art of programming, for concentrators and non-concentrators alike, with or without prior programming experience. " />
+    <meta property="og:url" content="https://vay.io/" />
+    <meta property="og:site_name" content="Vay" />
+    <meta property="article:modified_time" content="2023-07-31T14:00:04+00:00" />
+    <meta property="og:image" content="https://www.estudarfora.org.br/wp-content/uploads/2018/06/harvard-annenberg-hall.jpg.webp" />
+    <meta property="og:image:width" content="2160" />
+    <meta property="og:image:height" content="1440" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json"
+        class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://vay.io/","url":"https://vay.io/","name":"Home - Welcome to Vay: Leading Company for Remote Driving","isPartOf":{"@id":"https://vay.io/#website"},"primaryImageOfPage":{"@id":"https://vay.io/#primaryimage"},"image":{"@id":"https://vay.io/#primaryimage"},"thumbnailUrl":"https://vay.io/wp-content/uploads/2021/09/07_Vay_car_Berlin.jpg","datePublished":"2021-12-16T18:14:20+00:00","dateModified":"2023-07-31T14:00:04+00:00","description":"Vay is a leading teledriving company that aims to launch a unique, affordable, and sustainable door-to-door mobility service.","breadcrumb":{"@id":"https://vay.io/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://vay.io/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://vay.io/#primaryimage","url":"https://vay.io/wp-content/uploads/2021/09/07_Vay_car_Berlin.jpg","contentUrl":"https://vay.io/wp-content/uploads/2021/09/07_Vay_car_Berlin.jpg","width":2160,"height":1440},{"@type":"BreadcrumbList","@id":"https://vay.io/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://vay.io/#website","url":"https://vay.io/","name":"Vay","description":"A new approach to driverless mobility","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://vay.io/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+    <!-- / Yoast SEO plugin. -->
+
+    <style>
+    body {
+        overflow-x: hidden;
+    }
+    </style>
+
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/vay.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2" } };
+        /*! This file is auto-generated */
+        !function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { p.clearRect(0, 0, i.width, i.height), p.fillText(e, 0, 0); e = i.toDataURL(); return p.clearRect(0, 0, i.width, i.height), p.fillText(t, 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (p && p.fillText) switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !s("\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff") }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wpml-blocks-css'
+        href='https://vay.io/wp-content/plugins/sitepress-multilingual-cms/dist/css/blocks/styles.css?ver=4.6.5'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css'
+        href='https://vay.io/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.7.7' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='cookie-law-info-css'
+        href='https://vay.io/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-public.css?ver=3.1.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='cookie-law-info-gdpr-css'
+        href='https://vay.io/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-gdpr.css?ver=3.1.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css'
+        href='https://vay.io/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='main-css' href='https://vay.io/wp-content/themes/vay/assets/css/main.css?ver=1684828131'
+        type='text/css' media='all' />
+    <script type='text/javascript' src='https://vay.io/wp-includes/js/jquery/jquery.min.js?ver=3.6.4'
+        id='jquery-core-js'></script>
+    <script type='text/javascript' src='https://vay.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0'
+        id='jquery-migrate-js'></script>
+    <script type='text/javascript' id='cookie-law-info-js-extra'>
+        /* <![CDATA[ */
+        var Cli_Data = { "nn_cookie_ids": ["_ga"], "cookielist": [], "non_necessary_cookies": { "analytics": ["_ga"] }, "ccpaEnabled": "", "ccpaRegionBased": "", "ccpaBarEnabled": "", "strictlyEnabled": ["necessary", "obligatoire"], "ccpaType": "ccpa_gdpr", "js_blocking": "1", "custom_integration": "", "triggerDomRefresh": "", "secure_cookies": "" };
+        var cli_cookiebar_settings = { "animate_speed_hide": "500", "animate_speed_show": "500", "background": "#FFF", "border": "#b1a6a6c2", "border_on": "", "button_1_button_colour": "#61a229", "button_1_button_hover": "#4e8221", "button_1_link_colour": "#fff", "button_1_as_button": "1", "button_1_new_win": "", "button_2_button_colour": "#333", "button_2_button_hover": "#292929", "button_2_link_colour": "#444", "button_2_as_button": "", "button_2_hidebar": "", "button_3_button_colour": "#dedfe0", "button_3_button_hover": "#b2b2b3", "button_3_link_colour": "#333333", "button_3_as_button": "1", "button_3_new_win": "", "button_4_button_colour": "#dedfe0", "button_4_button_hover": "#b2b2b3", "button_4_link_colour": "#333333", "button_4_as_button": "1", "button_7_button_colour": "#61a229", "button_7_button_hover": "#4e8221", "button_7_link_colour": "#fff", "button_7_as_button": "1", "button_7_new_win": "", "font_family": "inherit", "header_fix": "", "notify_animate_hide": "1", "notify_animate_show": "", "notify_div_id": "#cookie-law-info-bar", "notify_position_horizontal": "right", "notify_position_vertical": "bottom", "scroll_close": "", "scroll_close_reload": "", "accept_close_reload": "", "reject_close_reload": "", "showagain_tab": "", "showagain_background": "#fff", "showagain_border": "#000", "showagain_div_id": "#cookie-law-info-again", "showagain_x_position": "100px", "text": "#333333", "show_once_yn": "", "show_once": "10000", "logging_on": "", "as_popup": "", "popup_overlay": "1", "bar_heading_text": "", "cookie_bar_as": "banner", "popup_showagain_position": "bottom-right", "widget_position": "left" };
+        var log_object = { "ajax_url": "https:\/\/vay.io\/wp-admin\/admin-ajax.php" };
+/* ]]> */
+    </script>
+    <script type='text/javascript'
+        src='https://vay.io/wp-content/plugins/cookie-law-info/legacy/public/js/cookie-law-info-public.js?ver=3.1.1'
+        id='cookie-law-info-js'></script>
+    <link rel="https://api.w.org/" href="https://vay.io/wp-json/" />
+    <link rel="alternate" type="application/json" href="https://vay.io/wp-json/wp/v2/pages/6" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://vay.io/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://vay.io/wp-includes/wlwmanifest.xml" />
+    <link rel='shortlink' href='https://vay.io/' />
+    <link rel="alternate" type="application/json+oembed"
+        href="https://vay.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvay.io%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="https://vay.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvay.io%2F&#038;format=xml" />
+    <meta name="generator" content="WPML ver:4.6.5 stt:1,3;" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/plain" data-cli-class="cli-blocker-script" data-cli-script-type="analytics" data-cli-block="true"
+        data-cli-element-position="head" async src="https://www.googletagmanager.com/gtag/js?id=G-XLNYFJ2YGX"></script>
+    <script type="text/plain" data-cli-class="cli-blocker-script" data-cli-script-type="analytics" data-cli-block="true"
+        data-cli-element-position="head">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XLNYFJ2YGX');
+</script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png">
+    <link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest">
+    <link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff"><!-- Matomo Tag Manager -->
+    <script>
+        var _mtm = window._mtm = window._mtm || [];
+        _mtm.push({ 'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start' });
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.async = true; g.src = 'https://cdn.matomo.cloud/vay.matomo.cloud/container_UVELpSfY.js'; s.parentNode.insertBefore(g, s);
+    </script>
+    <!-- End Matomo Tag Manager -->
+</head>
+
+<body class="home page-template-default page page-id-6 is-loading" data-color="beam">
+    <!-- SITE -->
+    <div id="site" class="site js-site">
+        <div class="loader js-loader">
+            <a href="/" class="hero__logo">
+                <img src="" alt="">
+            </a>
+        </div>
+
+        <div class="cursor-container js-cursor">
+            <div class="cursor" data-play="Play video" data-close="Close video"></div>
+        </div>
+
+        <div class="js-scrollable" data-scroll-container>
+            <div class="employee js-employee" data-employee-index="0">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2021/12/Thomas.jpg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Thomas <br />
+                        von der Ohe </h2>
+                    <p class="employee__position text">
+                        Co-Founder, CEO </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p><span style="font-weight: 400;">You come across an opportunity to positively impact societies
+                                around the globe maybe once in your lifetime. An opportunity to truly make a difference.
+                                Our unique approach to autonomous driving gives us this chance: redefining how people
+                                move in a better way. Building and shipping a product with this great team is what
+                                drives me day and night.</span></p>
+                        <h4>BACKGROUND</h4>
+                        <p><span style="font-weight: 400;">Launched Zoox’ first self-driving vehicle on public streets
+                                as leading Technical Program Manager in Silicon Valley, launched Amazon’s first Echo as
+                                leading Technical Program Manager on Device Software, Founded two (funded) mobility
+                                companies. M. Sc. Management Science and Engineering, Stanford University.</span></p>
+                        <h4></h4>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/thomas-von-der-ohe/"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="1">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2021/12/Fabrizio.jpg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Fabrizio <br />
+                        Scelsi </h2>
+                    <p class="employee__position text">
+                        Co-Founder, VP Engineering </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p>Building products together with an amazing team based on cutting-edge technology to serve a
+                            greater purpose and solve problems – for the people, for our planet.</p>
+                        <h4>BACKGROUND</h4>
+                        <p><span style="font-weight: 400;">Manager of an engineering team in Silicon Valley to build
+                                autonomous shuttles, built teams and various mobility products: electric race cars,
+                                e-motorcycles, light electric vehicles, electric passenger vehicles, including one of
+                                the most successful electric delivery vehicles in Germany. RWTH Aachen, Imperial College
+                                London.</span></p>
+                        <h4></h4>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/fabrizioscelsi/"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="2">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2022/07/Bodgan.jpg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Bogdan <br />
+                        Djukic </h2>
+                    <p class="employee__position text">
+                        Co-founder, Director Teledrive Experience </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p><span style="font-weight: 400;">Vay is aiming to launch the first vehicle without a safety
+                                driver on public roads in Europe. This involves exciting engineering challenges, many of
+                                which have never been worked on before, ranging from autonomous vehicle technology,
+                                cybersecurity, backend, machine learning and safety-critical SW. Coming up with
+                                engineering solutions to these topics is something that I’m super excited to work on at
+                                Vay.</span></p>
+                        <h4>BACKGROUND</h4>
+                        <p><span style="font-weight: 400;">Team Lead at Microsoft, Senior Software Engineer at Skype. M.
+                                Sc. in Computer Science from Belgrade University.</span></p>
+                        <h4></h4>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/bogdandjukic/"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="3">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2022/07/Mariona.jpg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Mariona <br />
+                        Bosch </h2>
+                    <p class="employee__position text">
+                        Director of Engineering Operations </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p><span style="font-weight: 400;">Working closely with people from different cultures and
+                                professional backgrounds (hardware, software, operations, etc.) gives me the chance to
+                                learn new ways of approaching projects, structuring teams, and setting up processes
+                                every day. The results of this incredible teamwork are hugely rewarding, and visible in
+                                each step of our product.</span></p>
+                        <h4>BACKGROUND</h4>
+                        <p><span style="font-weight: 400;">Part of the management circle at AUDI AG, responsible for the
+                                implementation of prototypes at early development stages of new products (innovation
+                                vehicles, concept and pre-series vehicles, show cars, design models, testing single
+                                parts, PoCs, 3D-printing)</span></p>
+                        <h4></h4>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/mariona-bosch-herrero-47a59aa0/"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="4">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2022/03/Hans-1.jpeg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Hans-Leo <br />
+                        Ross </h2>
+                    <p class="employee__position text">
+                        Director of Safety </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p><span style="font-weight: 400;">All my professional life I have been working for the
+                                protection and safety of people and the environment. I want to further provide safe and
+                                user-friendly automation systems for our future mobility needs.</span></p>
+                        <h4>BACKGROUND</h4>
+                        <p><span style="font-weight: 400;">25+ years experience in system safety at Conti., Mando,
+                                Bosch. Led the VDA working group in Germany to create ISO 26262 and influenced worldwide
+                                safety standardization. Author of several text books on functional safety.</span></p>
+                        <h4></h4>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/hans-leo-ross-175790b"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="5">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2022/08/IMG_1545.jpg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Justin <br />
+                        Spratt </h2>
+                    <p class="employee__position text">
+                        VP - Business & Corporate Development </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p>What drives me is to work on goals that have a big impact on society. Additionally, I wanted
+                            to work with the smartest and most innovative people in the tech world. That&#8217;s better
+                            at Vay than any other company I&#8217;ve spoken to recently.</p>
+                        <h4>BACKGROUND</h4>
+                        <p>Was CEO and chief growth officer at Quirk. Began his professional life at Morgan Stanley as a
+                            fixed income trader after studying economics and finance. Built the first startup incubator
+                            in Africa in 2002 and has been mentoring founders of technology startups for over ten years.
+                            He is an angel investor in software technology and holds board positions in some of these
+                            companies.</p>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/justinspratt"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="6">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2023/07/Screenshot-2023-07-07-at-13.10.17.png" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Anja <br />
+                        Rechsteiner </h2>
+                    <p class="employee__position text">
+                        Director of Communications </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p>What drives me is to start something from scratch and use all my experience to find the best
+                            way to communicate our exciting story. I believe my work can have an impact on how people
+                            feel about more sustainable transportation options.</p>
+                        <h4>BACKGROUND</h4>
+                        <p>Worked for 15 years in leading communication agencies such as fischerAppelt and Ketchum in
+                            Germany and the UK for various brands and companies from FMCG to travel to mobility. Holds
+                            an MBA in Communication &amp; Leadership from Quadriga University as well as a Master degree
+                            in History, Sociology and Media &amp; Art Studies from University of Constance.</p>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/anja-rechtsteiner/"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="7">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2023/07/Screenshot-2023-07-11-at-13.54.23.png" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Caleb <br />
+                        Varner </h2>
+                    <p class="employee__position text">
+                        US General Manager </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p>We’re close to letting users experience the Vay Magic for the first time in Las Vegas and I
+                            know that they are going to find it a compelling mix of great value powered by a super slick
+                            in-app experience. It’s awesome to have the opportunity to take this piece of underlying
+                            tech (remote driving) and build an experience around it that users will use, love and tell
+                            their friends about.</p>
+                        <h4>BACKGROUND</h4>
+                        <p>Co-founded and served as the Global General Manager of Uber Rent &amp; Valet, a new mobility
+                            investment by Uber. Lead the Global Vehicles team at Uber, overseeing critical planning and
+                            P&amp;L responsibilities. Built Uber&#8217;s vehicles business in Latin America from the
+                            ground and managed the customer-facing financial services business across Sub-Saharan
+                            Africa. Lead international financial services strategy engagements with the Boston
+                            Consulting Group for John Deere, focusing on regions like Brazil, Africa, and India. Owns a
+                            Masters of Business Administration of Duke University.</p>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/caleb-varner-64b3506"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="8">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2022/03/Christian.jpeg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Christian <br />
+                        Hertlein </h2>
+                    <p class="employee__position text">
+                        VP - Product Design and Brand </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p><span style="font-weight: 400;">Building the future of mobility, which is sustainable and
+                                truly serving the needs of people, by creating a holistic experience, a relatable brand
+                                and shaping services that are going to make a difference to how we move within and
+                                between cities.</span></p>
+                        <h4>BACKGROUND</h4>
+                        <p><span style="font-weight: 400;">Head of Global Design at N26, Senior Lead Designer at IDEO,
+                                in-car interactions for Volkswagen.</span></p>
+                        <h4></h4>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/christianhertlein/"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="9">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2022/03/David.jpeg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        David <br />
+                        Gossow </h2>
+                    <p class="employee__position text">
+                        Senior Principal Software Engineer </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p><span style="font-weight: 400;">After having worked in autonomous robotics research for a
+                                long time in the Silicon Valley, I am thrilled to be working at a company that is
+                                finally bringing this technology into people’s everyday lives.</span></p>
+                        <h4>BACKGROUND</h4>
+                        <p><span style="font-weight: 400;">Tech Lead at Google Tango in Mountain View, Research Engineer
+                                at Willow Garage, yoga instructor since 2018.</span></p>
+                        <h4></h4>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/david-gossow/"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="10">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2022/11/johanna_loomis-1.jpg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Johanna <br />
+                        Loomis </h2>
+                    <p class="employee__position text">
+                        Lead Industrial Designer </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p>What drives me at Vay is the enthusiasm and passion for a vision that is embedded in the
+                            company culture, and at the same time the strict discipline in its implementation.</p>
+                        <h4>BACKGROUND</h4>
+                        <p>Industrial Product Design Lead at TEAMS DESIGN GmbH for over six years, started as a Trainee
+                            in Shanghai City. Worked as Industrial and Product Designer at LOTHAR BOHM ASSOCIATES
+                            LIMITED, Lutz Herrmann Design, Indeed Innovation and Werksdesign.</p>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/johanna-l-546228147/"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="11">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2022/03/Vladi.jpeg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Vladimir <br />
+                        Bilonenko </h2>
+                    <p class="employee__position text">
+                        Director of Software Engineering </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p><span style="font-weight: 400;">Helping engineers to do their best and most important work.
+                                Elegance in software. Bringing ideas from books to real life and from one domain to
+                                another. Going from A to B fast.</span></p>
+                        <h4>BACKGROUND</h4>
+                        <p><span style="font-weight: 400;">Software Generalist. Maps and Mobility Geek (Lon, Lat not
+                                Lat, Lon). High Load at Yandex, Geo Analytics and Last Mile at HERE Maps, Mobility
+                                Platform at Daimler. Conway’s Law Enthusiast.</span></p>
+                        <h4></h4>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/bilonenko/"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="12">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2022/11/alina_presti.jpg" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        ALINA <br />
+                        PRESTI </h2>
+                    <p class="employee__position text">
+                        Teledriver </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p><span style="font-weight: 400;">A car enthusiast, driven by cars, driving and
+                                technology.</span></p>
+                        <h4>BACKGROUND</h4>
+                        <p>Nursery school teacher. Driver at Skoda’s start-up Caredriver.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="employee js-employee" data-employee-index="13">
+                <button class="employee__close js-employee-close"></button>
+                <div class="employee__image js-employee-popup-image js-cursor-photo">
+                    <img src="https://vay.io/wp-content/uploads/2023/07/Screenshot-2023-07-18-at-10.19.14.png" alt="">
+                </div>
+                <div class="employee__content">
+                    <h2 class="employee__name">
+                        Stefano<br />
+                        Buzzanca </h2>
+                    <p class="employee__position text">
+                        Head of Operations </p>
+                    <div class="employee__description">
+                        <h4>WHAT DRIVES ME</h4>
+                        <p>What drives me at Vay is the magic. That daily feeling that every small step forward, every
+                            single improvement, every small success is a step towards the final goal: to create
+                            something unique that will change the lives of many.</p>
+                        <h4>BACKGROUND</h4>
+                        <p><span style="font-weight: 400;">His 20+ years of experience in various mobility companies
+                                make him a great leader and KPI driven operator at Vay. L</span>aunched and ran various
+                            mobility services in 16+ cities, focused on free-floating car-sharing.</p>
+                        <a class="employee__social linkedin" target="_blank"
+                            href="https://www.linkedin.com/in/stefano-buzzanca-27292949"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="full-video js-plyr-video-container">
+                <button class="full-video__close"></button>
+                <video class="js-plyr-video" playsinline controls
+                    data-poster="https://vay.io/wp-content/uploads/2022/04/VayPoster.jpeg">
+                    <source
+                        src="https://vay.io/wp-content/uploads/2022/03/Vay-A-new-approach-to-driverless-mobility.mp4"
+                        type="video/mp4" />
+                </video>
+            </div>
+
+            <main data-scroll-section>
+
+                <section class="hero hero--home js-hero js-play-full-video js-bg-change js-cursor-photo" data-bg="dark">
+                    <a class="hero__logo">
+                        <img src="" alt="">
+                    </a>
+
+
+                    
+
+                    <div class="hero__bg js-full-video-bg" data-scroll data-scroll-speed="-2">
+                        <div class="hero__bg__image">
+                            <img class="hero__bg__image__img"
+                                src="./src/images/introdu.png" alt="">
+                        </div>
+                        <div class="hero__bg__video" data-scroll data-scroll-repeat data-scroll-call="hero_video">
+                            <video class="js-hero-video" muted loop playsinline
+                                poster="./src/images/introdu.png">
+                                <source src="./src/images/introdu.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <h1 class="hero__headline" data-caption="">
+                        <p><span>This is CS50</span> <span>Introduction to Computer Science</span></p>
+                    </h1>
+                    <a class="hero__button button button--blur js-scroll-link" target="_self" href="#the-journey">
+                        <span>Apply Course</span>
+                    </a>
+                    <svg class="hero__arrow hero__arrow" width="32" height="32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 28.5V3M4.5 17.5L16.073 29 28 17.5" stroke="#F7D9BF" stroke-width="1.5"
+                            stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </section>
+
+
+                <section id="the-journey" class="journey section section--fog js-bg-change" data-bg="light">
+                    <div class="container">
+                        <div class="services__content" data-scroll data-scroll-offset="25%">
+                            <h3 class="services__heading heading">
+                                Mastering Basic Programming Concepts </h3>
+                            <div class="services__text">
+                                <p class="text">
+                                <h1 style="font-size:2.8em; ">
+                                    <br />Exploring Algorithms and Programming Logic<br /><br />
+                                    <a href="#our-values"
+                                        ><u>Read more</u></a><br /><br />
+                                </h1>
+                                </p>
+                                <p class="text">
+                                    Explore the world of computer science with Harvard's renowned CS50 course. 
+                                    Learn programming, algorithms and data structures in a challenging and 
+                                    engaging way. Get ready to master the fundamentals that drive today's technology.
+
+                                    <br><br>
+                                    Over the years, the course has gained recognition for its excellence and for 
+                                    transforming students into creative thinkers and skilled problem solvers.
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="journey__teledriving" data-scroll data-scroll-offset="25%">
+                            <div class="journey__teledriving__video" data-scroll-call="play_teledriving" data-scroll>
+                                <video class="journey__teledriving__video__desktop js-teledriving-video" data-step="1"
+                                    muted playsinline
+                                    poster="./src/images/cert.png">
+                                    <source
+                                        src=""
+                                        type="video/mp4">
+                                </video>
+                            </div>
+                            <div style="padding-bottom: 50px;" class="journey__teledriving__swiper swiper swiper-no-swiping js-teledriving-swiper"
+                                data-step="1">
+                                <div class="swiper-wrapper">
+                                    <div class="journey__teledriving__slide
+                         swiper-slide js-teledriving-slide">
+                                        <h4 class="journey__teledriving__heading">
+                                            CS50 Free Certificate </h4>
+                                        <p class="journey__teledriving__text">
+                                            At CS50, we believe that learning should be accessible to everyone. 
+                                            That's why we offer you the opportunity to earn a Free Certificate 
+                                            to celebrate your achievement in completing the course. This certificate 
+                                            is more than just a document; it is a tangible testament to his skills 
+                                            and efforts in computer science. </p>
+                                        <button class="button button--twilight js-next" data-index="1">
+                                            Apply Course </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="services section section--beam js-bg-change" data-bg="light" data-scroll
+                    data-scroll-repeat data-scroll-call="update_bg" data-scroll-offset="50%" data-color="beam">
+                    <div class="container">
+                        <div class="services__content" data-scroll data-scroll-offset="25%">
+                            <h3 class="services__heading heading">
+                                Benefits of Free Certificate </h3>
+                            <div class="services__text">
+                                <p class="text">
+                                    Not only is the CS50 Free Certificate a visually impressive milestone, 
+                                    it can also open the door to exciting opportunities. Upon receiving this 
+                                    certificate, you will be able to
+                                </p>
+                                <p class="text">
+                                    Stand Out on Resumes: Add a respected credential to your resume highlighting
+                                     your programming and computer science skills.<br><br/>
+                                    Impress Employers: Employers value candidates who demonstrate initiative in 
+                                    seeking knowledge and acquiring industry-relevant skills.<br><br/>
+                                    Strengthen your Network: By sharing your achievement, you can connect with 
+                                    other professionals and students interested in the field.
+
+Boost Confidence: Obtaining a certificate recognized by a prestigious institution like Harvard can boost your confidence in your abilities.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services__video js-cursor-photo js-play-video-trigger" data-scroll
+                            data-scroll-offset="25%">
+                            <div class="services__video__bg"
+                                style="background-image: url(./src/images/introdu2.png)">
+                            </div>
+                            <div class="js-video services__video__video" data-vimeo-urla=""></div>
+                            <button class="services__video__button button button--blur js-play-video-button">
+                                <span>Play Course</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="safety section section--twilight js-bg-change" data-bg="dark">
+                    <div class="container">
+                        <div class="services__content" data-scroll data-scroll-offset="25%">
+                            <h3 class="services__heading heading">
+                                Creative Projects That Stimulate Creativity </h3>
+                            <div class="services__text">
+                                <p class="text">
+                                    At CS50, learning goes beyond theory and into the realm of creativity. 
+                                    Our weekly challenges and hands-on projects are designed to challenge 
+                                    your mind and inspire your imagination.
+                                </p>
+                                <p class="text">
+                                    Work on projects that address real-world problems and put your skills to the test by 
+                                    creating innovative, functional solutions. By collaborating with peers and receiving 
+                                    feedback from instructors, you'll see yourself evolve from a student to a confident 
+                                    software creator. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="safety__animation js-safety-car-container">
+                        <div class="safety__car js-safety-car" data-scroll data-scroll-repeat data-scroll-speed="5"
+                            data-scroll-direction="horizontal" data-scroll-call="animate_car">
+                            <div class="safety__car__bg"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="human-machine section section--twilight js-bg-change" data-bg="dark">
+                    <div class="container">
+                        <div class="services__content" data-scroll data-scroll-offset="25%">
+                            <h3 class="services__heading heading">
+                                CS50 Students Who Turned Learning into Brilliant Careers</h3>
+                            <div class="services__text">
+                                <p class="text">
+                                    CS50 students have a track record of success that transcends the educational environment.<br /><br />
+
+                                    Many of our alumni have turned their passions and skills into brilliant careers at renowned technology companies.
+                                </p>
+                                <p class="text">
+                                    From groundbreaking startups to industry giants, the skills gained at CS50 have proven to be a solid foundation 
+                                    for professional success. Read their inspiring stories and discover how the CS50 
+                                    shaped their path to greatness. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="human-machine__animation js-human-machine">
+                        <div class="circle human">
+                            <span>Creative</span>
+                        </div>
+                        <div class="circle machine">
+                            <span>Technology</span>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="our-values" class="values section section--evening js-bg-change" data-bg="dark">
+                    <div class="container">
+                        <header class="section__header" data-scroll data-scroll-offset="25%">
+                            <p class="section__header__subheading">
+                                harvard cs50 course </p>
+                            <h3 class="section__header__heading">
+                                Exploring the Modules </h3>
+                        </header>
+                        <div class="values__slider swiper js-values-slider js-draggable-mist" data-scroll
+                            data-scroll-offset="25%">
+                            <div class="swiper-wrapper">
+                                <div class="values__slide swiper-slide js-value">
+                                    <div class="values__slide__bg">
+                                        <img src="https://vay.io/wp-content/uploads/2022/02/1-We-pioneer-change-blur-768x469.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="values__slide__content">
+                                        <h2 class="values__slide__heading">
+                                            Programming Introduction</h2>
+                                        <p class="values__slide__text text js-value-text">
+                                            In this module, you will dive into the basics of programming. You will learn the fundamental concepts of logic, 
+                                            syntax and control structures through popular programming languages. Explore the art of turning problems into 
+                                            algorithmic solutions, and start creating your first programs. </p>
+                                    </div>
+                                </div>
+                                <div class="values__slide swiper-slide js-value">
+                                    <div class="values__slide__bg">
+                                        <img src="https://vay.io/wp-content/uploads/2022/02/2-We-fuel-collaboration-blur-768x1138.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="values__slide__content">
+                                        <h2 class="values__slide__heading">
+                                            Algorithms and data structures </h2>
+                                        <p class="values__slide__text text js-value-text">
+                                            Here, you will deepen your understanding of algorithms and data structures. From sorting lists to searching trees, 
+                                            you'll discover how to optimize the efficiency and speed of your programs, making them more powerful and functional.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="values__slide swiper-slide js-value">
+                                    <div class="values__slide__bg">
+                                        <img src="https://vay.io/wp-content/uploads/2022/02/3-We-drive-action-blur-768x518.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="values__slide__content">
+                                        <h2 class="values__slide__heading">
+                                            Web development</h2>
+                                        <p class="values__slide__text text js-value-text">
+                                            In this module, you will enter the world of web development. You'll learn about HTML, CSS and JavaScript, the essential 
+                                            building blocks of engaging and interactive websites. Explore responsive design, best practices and 
+                                            start creating your own dynamic web pages. </p>
+                                    </div>
+                                </div>
+                                <div class="values__slide swiper-slide js-value">
+                                    <div class="values__slide__bg">
+                                        <img src="https://vay.io/wp-content/uploads/2022/02/4-We-build-trust-blur-768x954.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="values__slide__content">
+                                        <h2 class="values__slide__heading">
+                                            Cyber Security </h2>
+                                        <p class="values__slide__text text js-value-text">
+                                            Cybersecurity is crucial in the digital age. In this module, you will explore topics such as encryption, authentication, and exploiting 
+                                            vulnerabilities. Discover how to protect systems, networks and data against cyber threats and strengthen your understanding of security 
+                                            best practices.
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="values__slide swiper-slide js-value">
+                                    <div class="values__slide__bg">
+                                        <img src="https://vay.io/wp-content/uploads/2022/02/5-We-create-magic-blur-768x518.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="values__slide__content">
+                                        <h2 class="values__slide__heading">
+                                            Database and SQL </h2>
+                                        <p class="values__slide__text text js-value-text">
+                                            Data drives many modern systems. In this module, you will dive into the world of databases and learn how to use SQL to store, retrieve and 
+                                            manipulate information. Build your data modeling skills and understand how information is organized and accessed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="values__button">
+                            <a class="button button--mist" target="_self" href="">
+                                <span>Join Course</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="employees" class="employees section section--beam js-bg-change" data-bg="light">
+                    <div class="container">
+                        <header class="section__header" data-scroll data-scroll-offset="25%">
+                            <p class="section__header__subheading">
+                                Meet the team </p>
+                            <h3 class="section__header__heading">
+                                creator CS50 </h3>
+                        </header>
+
+                        <div class="employees__slider swiper js-employees-slider js-cursor-photo js-draggable-evening"
+                            data-scroll data-scroll-offset="25%">
+                            <div class="employees__slider__swipeable"></div>
+                            <div class="swiper-wrapper">
+                                <div class="employees__slide swiper-slide js-employee-slide" data-employee-index="0">
+                                    <div class="employees__slide__image js-employee-image js-cursor-link">
+                                        <img src="https://vay.io/wp-content/uploads/2021/12/Thomas.jpg" alt="">
+                                    </div>
+                                    <div class="employees__slide__content">
+                                        <h2 class="employees__slide__name">
+                                            Thomas <br />
+                                            von der Ohe </h2>
+                                        <p class="employees__slide__position">
+                                            Co-Founder, CEO </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <section class="news section section--beam js-bg-change" data-bg="light">
+                    <div class="container">
+                        <header class="section__header" data-scroll data-scroll-offset="25%">
+                            <p class="section__header__subheading">
+                                benefits </p>
+                            <h3 class="section__header__heading">
+                                benefits of attending CS50! </h3>
+                        </header>
+                        <div class="news__content" data-scroll data-scroll-offset="25%">
+                            <div class="news__post js-news-post is-visible">
+                                <div class="news__post__more">
+                                    <span class="news__post__more__icon"></span>
+                                </div>
+                                <ul class="news__post__tags">
+                                    <a href="" rel="tag">programming fundamentals</a><a
+                                        href="" rel="tag">Solid base</a>
+                                </ul>
+                                <p class="news__post__date">
+                                    Programming</p>
+                                <h5 class="news__post__title">
+                                    Solid Foundation in Computer Science </h5>
+                                <div class="news__post__content js-news-post-content">
+                                </div>
+                            </div>
+                            <div class="news__post js-news-post is-visible">
+                                <div class="news__post__more">
+                                    <span class="news__post__more__icon"></span>
+                                </div>
+                                <ul class="news__post__tags">
+                                    <a href="https://vay.io/tag/mobile-world-congress/" rel="tag">variety of careers</a>
+                                    <a href="https://vay.io/tag/reuters/" rel="tag">acquire skills</a>
+                                </ul>
+                                <p class="news__post__date">
+                                    Be ready to join </p>
+                                <h5 class="news__post__title">
+                                    Preparation for Careers in Technology </h5>
+                                <div class="news__post__content js-news-post-content">
+                                </div>
+                            </div>
+                            <div class="news__post js-news-post is-visible">
+                                <div class="news__post__more">
+                                    <span class="news__post__more__icon"></span>
+                                </div>
+                                <ul class="news__post__tags">
+                                    <a href="https://vay.io/tag/bloomberg/" rel="tag">creative projects</a><a
+                                        href="https://vay.io/tag/remote-controlled-car/" rel="tag">theoretical concepts</a>
+                                </ul>
+                                <p class="news__post__date">
+                                    Challenges </p>
+                                <h5 class="news__post__title">
+                                    Practical and Engaging Learning </h5>
+                                <div class="news__post__content js-news-post-content">
+                                </div>
+                            </div>
+                            <a href="#" class="news__more button button--evening js-see-more-news">Join Curse Now!!</a>
+                        </div>
+                    </div>
+                </section>
+            </main> 
+        </div> <!-- / .js-scrollable -->
+    </div> <!-- / .js-site -->
+    <link rel='stylesheet' id='cookie-law-info-table-css'
+        href='https://vay.io/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-table.css?ver=3.1.1'
+        type='text/css' media='all' />
+    <script type='text/javascript'
+        src='https://vay.io/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.7' id='swv-js'></script>
+    <script type='text/javascript' id='contact-form-7-js-extra'>
+        /* <![CDATA[ */
+        var wpcf7 = { "api": { "root": "https:\/\/vay.io\/wp-json\/", "namespace": "contact-form-7\/v1" } };
+/* ]]> */
+    </script>
+    <script type='text/javascript' src='https://vay.io/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.7'
+        id='contact-form-7-js'></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+    <script src="https://vay.io/wp-content/themes/vay/assets/js/main.js"></script>
+</body>
+
+</html>
