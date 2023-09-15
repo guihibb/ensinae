@@ -1,0 +1,246 @@
+body {
+    background: #111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Logo-Center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.nav {
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.sec1 {
+    padding-right: 40px;
+    padding-left: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.sec2 {
+    padding-right: 40px;
+    padding-left: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.sec3 {
+    padding-right: 40px;
+    padding-left: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    gap: 20px;
+}
+
+.sec4 {
+    padding-right: 40px;
+    padding-left: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    gap: 20px;
+}
+
+.sec5 {
+    padding-right: 40px;
+    padding-left: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    gap: 20px;
+}
+
+.sec6 {
+    padding-right: 40px;
+    padding-left: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    gap: 20px;
+}
+
+
+.titulo {
+    margin: 0;
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cs50 {
+    color: #FFF;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.hv {
+    color: #30B95F;
+
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.para {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+.grife {
+    color: #30B95F;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.btt {
+    border-radius: 100px;
+    background: #FFF;
+    display: inline-flex;
+    padding: 15px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cm {
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+.des {
+    color: rgba(255, 255, 255, 0.50);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.subti {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+.btt-info {
+    display: flex;
+    width: 200px;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid #30B95F;
+}
+.txt-btt-info {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.camp-btt-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+.btt-info-full {
+    display: flex;
+    width: 200px;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #30B95F;
+}
+
+.btt-curse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 200px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 2px solid #30B95F;
+}
+
+.txt-btt-curse {
+    margin: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.txt-btt-curse-red {
+    color: #B93030;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+.txt-btt-curse-green {
+    color: #30B95F;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
