@@ -258,7 +258,7 @@ section  {
 .box-info-certi {
     flex-direction: column;
     display: flex;
-    padding: 102px 15px 0px 15px;
+    padding: 15px 0px 15px;
     justify-content: center;
     align-items: center;
 }
@@ -284,10 +284,6 @@ section  {
     width: 500px;
     position: absolute;
     padding-bottom: 350px;
-}
-
-.box-certi {
-    padding-top: 100px;
 }
 
 .info-box {
