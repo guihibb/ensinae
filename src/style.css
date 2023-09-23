@@ -265,7 +265,7 @@ section  {
 
 .txt-certificado {
     display: flex;
-    width: 100%;
+    width: 90%;
     padding-top: 60px;
     padding-bottom: 40px;
     padding-right: 40px;
@@ -281,7 +281,7 @@ section  {
 }
 
 .certificado {
-    width: 500px;
+    width: 5c00px;
     position: absolute;
     padding-bottom: 350px;
 }
@@ -424,6 +424,10 @@ section  {
     gap: 10px;
 }
 
+.box-certi{
+    padding-top: 150px;
+}
+
 @media only screen and (max-width: 650px) {
     section {
         margin: 60px;
@@ -482,19 +486,20 @@ section  {
         width: 100px;
     }
     .certificado {
-        width: 450px;
+        width: 350px;
     }
 }
 
 @media only screen and (max-width: 450px) {
     .certificado {
-        width: 420px;
+        width: 380px;
+        padding-bottom: 450px;
     }
 }
 
 @media only screen and (max-width: 400px) {
     .certificado {
-        width: 350px;
+        width: 330px;
     }
 
     .harvard-logo {
@@ -507,13 +512,19 @@ section  {
         width: 300px;
     }
 
-    .box-certi {
-        padding-top: 30px;
-    }
-
     .harvard-logo {
         width: 120px;
     }
 }
 
+@media only screen and (max-width: 650px) {
+    .box-certi {
+        padding-top: 200px;
+    }
+}
 
+@media only screen and (max-width: 300px) {
+    .box-certi {
+        padding-top: 100px;
+    }
+}
