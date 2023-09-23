@@ -2,10 +2,14 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="./src/media/icon.svg">
+    <link rel="icon" type="image/x-icon" href="./src/media/fav.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <meta name="description" content="Introdução à Ciência da Computação de Harvard, 
+    mais conhecido como CS50, é o maior curso no campus de Harvard e mais de 4.000.000 
+    alunos em todo o mundo se inscreveram no curso no Ensina.">
+    <meta property="og:image" content="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
     <title>Ensina | CS50 Harvard</title>
 </head>
 <body>
@@ -16,12 +20,12 @@
         <img class="play-video" style="position: absolute;" src="./src/media/play-vector.svg" alt="">
         <img class="img-fundo" src="./src/media/fundo-video.png" alt="">
     </div>
-    <section class="sec1">
-        <img src="./src/media/Harvard_University_logo 1.png" alt="">
+    <section id="sec-intro" class="sec1">
+        <img class="harvard-logo" src="./src/media/Harvard_University_logo 1.png" alt="">
         <div class="star-sec">
             <div class="over">
                 <div>4.9</div>
-                <img src="./src/media/star-vector.svg" alt="">
+                <img class="star" src="./src/media/star-vector.svg" alt="">
             </div>
             <div class="al">82.342 alunos</div>
         </div>
@@ -37,18 +41,24 @@
             </p>
         </div>
         <div class="box-tag">
-            <div class="box">sql</div>
-            <div class="box">python</div>
-            <div class="box">c#</div>
-            <div class="box">java</div>
-            +80
+            <div class="box-wrap">
+                <div class="box">sql</div>
+                <div class="box">python</div>
+            </div>
+            <div class="box-wrap">
+                <div class="box">c#</div>
+                <div class="box">java</div>
+            </div>
+            <div class="nu">+80</div>
         </div>
         <div class="creator">
             <img src="./src/media/Harvard_University_logo 2.png" alt="">
             <div class="txt-creator">
                 <div class="text-creator">
-                    oferecimento: <span class="txt-creator-harvard">Harvard University</span>
+                    oferecimento: <div>
+                        <span class="txt-creator-harvard">Harvard University</span>
                     <img src="./src/media/verif.svg" alt="">
+                    </div>
                 </div>
                 <div class="btt-vf">
                     canal oficial
@@ -106,6 +116,75 @@
                 </p>
             </div>
         </div>
+    </section>
+    <section class="box-info">
+        <div class="box--">
+            <p class="descri-1">MÓDULOS</p>
+            <h1 class="titulo-2">Introdução a Programação</h1>
+            <p class="subtitulo-2">
+                A base sólida para o seu caminho na programação começa aqui. 
+                Este módulo oferece uma visão aprofundada dos conceitos 
+                fundamentais que você precisa dominar para se tornar um 
+                desenvolvedor habilidoso.
+            </p>
+            <div style="background: #0B933A; height: 2px; color: #0B933A; width: 100%;" class="line">.</div>
+        </div>
+        <div class="box--">
+            <p class="descri-1">MÓDULOS</p>
+            <h1 class="titulo-2">Algoritmos e Estruturas</h1>
+            <p class="subtitulo-2">
+                Neste módulo, você mergulhará nas técnicas de criação e análise de algoritmos, 
+                além de explorar as estruturas de dados que impulsionam a eficiência de seus 
+                programas. É a chave para otimizar suas soluções.
+            </p>
+            <div style="background: #0B933A; height: 2px; color: #0B933A; width: 100%;" class="line">.</div>
+        </div>
+        <div class="box--">
+            <p class="descri-1">MÓDULOS</p>
+            <h1 class="titulo-2">Desenvolvimento Web</h1>
+            <p class="subtitulo-2">
+                Aqui, você entrará no mundo emocionante do desenvolvimento web. 
+                Aprenda a criar sites dinâmicos e interativos, dominando as tecnologias 
+                essenciais que impulsionam a web moderna.
+            </p>
+            <div style="background: #0B933A; height: 2px; color: #0B933A; width: 100%;" class="line">.</div>
+        </div>
+        <div class="box--">
+            <p class="descri-1">MÓDULOS</p>
+            <h1 class="titulo-2">Segurança da Informação</h1>
+            <p class="subtitulo-2">
+                A proteção dos dados é vital. Neste módulo, você aprenderá a identificar e 
+                mitigar ameaças, garantindo a segurança de sistemas e informações valiosas. 
+                Este conhecimento é crucial em qualquer ambiente digital.
+            </p>
+            <div style="background: #0B933A; height: 2px; color: #0B933A; width: 100%;" class="line">.</div>
+        </div>
+    </section>
+    <section class="info-box">
+        <div class="body-green">.</div>
+        <div class="info--">
+            <div class="text--">
+                <h2 class="titulo-2">
+                    Na CS50, acreditamos que a aprendizagem deve ser acessível a todos.
+                </h2> 
+                <p class="subtitulo-2">
+                    É por isso que oferecemos a você a oportunidade de ganhar um Certificado Gratuito.
+                </p>
+            </div>
+            <div class="botoes">
+                <a class="a--" style="text-decoration:none;" href="">
+                    <div class="btt-inicio">começar agora</div>
+                </a>
+                <a class="a--" style="text-decoration:none;" href="#sec-intro">
+                    <div class="btt-info">mais informações</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <p class="text-footer">Desenvolva seus conhecimentos de onde quer que esteja.</p>
+        <img style="width: 150px;" src="./src/media/logo-footer.svg" alt="">
+        <p>© 2023 Ensina Inc. Todos os direitos reservados.</p>
     </section>
 </body>
 </html>

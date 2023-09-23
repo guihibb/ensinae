@@ -222,7 +222,7 @@ section  {
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    gap: 24px;
+    gap: 44px;
 }
 
 .box-- {
@@ -231,7 +231,7 @@ section  {
     align-items: start;
     justify-content: star;
     justify-items: start;
-    gap: 8px;
+    gap: 10px;
 }
 
 .titulo-2 {
@@ -289,3 +289,235 @@ section  {
 .box-certi {
     padding-top: 100px;
 }
+
+.info-box {
+    background: rgba(11, 147, 58, 0.20);
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    padding-bottom: 40px;
+}
+
+.body-green {
+    height: 30px;
+    color: #0B933A;
+    background: #0B933A;
+    width: 100%;
+}
+
+.text-- {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+.btt-inicio {
+    display: flex;
+    width: 100%;
+    padding: 14px 76px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 5px;
+    background: #0B933A;
+
+    text-align: center;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}.btt-inicio:hover {
+    transition: 0.2s ease-out;
+    color: #0B933A;
+    border-radius: 5px;
+    border: 2px solid #2CAE58;
+    background: rgba(11, 147, 58, 0.10);
+}
+
+.btt-info {
+    display: flex;
+    width: 100%;
+    padding: 14px 70px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 5px;
+    border: 2px solid #0B933A;
+    background: rgba(11, 147, 58, 0.10);
+
+    color: #0B933A;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}.btt-info:hover {
+    background: #2cae575e;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+
+    color: #111;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.text-footer {
+    color: #111;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.a-- {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.info-- {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.box-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 650px) {
+    section {
+        margin: 60px;
+    }
+    .certificado {
+        padding-bottom: 380px;
+    }
+  }
+
+@media only screen and (max-width: 618px) {
+    section {
+        margin: 40px;
+    }
+    .harvard-logo {
+        width: 200px;
+    }
+  }
+
+@media only screen and (max-width: 570px) {
+    .nu {
+        display: none;
+    }
+    .box-wrap {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+  }
+
+@media only screen and (max-width: 560px) {
+    .certificado {
+        padding-bottom: 400px;
+    }
+  }
+
+@media only screen and (max-width: 490px) {
+    .text-creator {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section {
+        margin: 30px;
+    }
+
+    .al {
+        font-size: 14px;
+    }
+    .over {
+        font-size: 14px;
+    }
+    .star {
+        width: 100px;
+    }
+    .certificado {
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .certificado {
+        width: 420px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .certificado {
+        width: 350px;
+    }
+
+    .harvard-logo {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .certificado {
+        width: 300px;
+    }
+
+    .box-certi {
+        padding-top: 30px;
+    }
+
+    .harvard-logo {
+        width: 120px;
+    }
+}
+
+
